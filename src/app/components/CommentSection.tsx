@@ -5,7 +5,7 @@ import { Button } from "../components/ui/button";
 
 interface Comment {
   id: string;
-  postId: string;  // Add postId to associate the comment with a post
+  postId: string;  
   author: string;
   text: string;
 }
@@ -20,7 +20,7 @@ export default function CommentSection({ postId }: CommentSectionProps) {
   const [newComment, setNewComment] = useState('');
   const [editingCommentId, setEditingCommentId] = useState<string | null>(null);
 
-  // Add a new comment
+
   const handleAddComment = () => {
     if (newComment.trim() && authorName.trim()) {
       const newCommentObj: Comment = {
@@ -35,7 +35,6 @@ export default function CommentSection({ postId }: CommentSectionProps) {
     }
   };
 
-  // Edit an existing comment
   const handleEditComment = (commentId: string) => {
     const commentToEdit = comments.find((comment) => comment.id === commentId);
     if (commentToEdit) {
