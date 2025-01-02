@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardTittle } from "../components/ui/card"; // Fixed 'CardTittle' to 'CardTitle'
+import { Card, CardContent, CardTittle } from "../components/ui/card";
 
 
 interface BlogCardProps {
